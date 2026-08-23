@@ -129,8 +129,27 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdr
 .btn-white{background:#fff;color:var(--navy);box-shadow:var(--shadow)}
 .btn-green{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(30,158,106,.3)}
 .btn-sm{padding:9px 16px;font-size:.85rem}
+
+/* hamburger */
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;flex:none}
+.menu-btn span{display:block;width:18px;height:2px;border-radius:2px;background:var(--navy);transition:.22s}
+.menu-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn.open span:nth-child(2){opacity:0}
+.menu-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:60px;left:0;right:0;z-index:99;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);padding:6px 20px calc(18px + env(safe-area-inset-bottom));display:none;flex-direction:column}
+.mobile-menu.open{display:flex;animation:menuIn .22s ease}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.mobile-menu a.mlink{padding:15px 4px;font-weight:700;color:var(--text);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:1rem}
+.mobile-menu a.mlink:last-of-type{border-bottom:none}
+.mobile-menu a.mlink::after{content:"\2192";color:var(--coral);font-weight:800}
+.mobile-menu .btn{margin-top:14px}
 @media(min-width:801px){.nav-links{display:flex}}
-@media(max-width:800px){.nav-links{display:none}.brand img{height:36px}.brand .name{font-size:.82rem}}
+@media(max-width:800px){
+  .nav-links{display:none}
+  .menu-btn{display:inline-flex}
+  .brand img{height:36px}.brand .name{font-size:.82rem}
+}
+@media(min-width:801px){.mobile-menu{display:none!important}}
 
 /* ---------- hero ---------- */
 .hero{position:relative;background:linear-gradient(150deg,var(--navy) 0%,var(--blue) 78%,#2a86dd 100%);color:#fff;overflow:hidden}
@@ -320,8 +339,20 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
       <a href="#contact">Contact</a>
       <a class="btn btn-primary btn-sm" href="#book">Book Now</a>
     </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a class="mlink" href="#services">Services</a>
+  <a class="mlink" href="#book">Book an appointment</a>
+  <a class="mlink" href="#branches">Branches &amp; hours</a>
+  <a class="mlink" href="#faq">FAQ</a>
+  <a class="mlink" href="#contact">Contact</a>
+  <a class="btn btn-primary" href="#book">📅 Book Now</a>
+</div>
 
 <main id="top">
 
@@ -726,6 +757,23 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
 var BOOKING_ENDPOINT = "";
 
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+// mobile menu
+var menuBtn = document.getElementById('menuBtn'), mobileMenu = document.getElementById('mobileMenu');
+if(menuBtn && mobileMenu){
+  var closeMenu = function(){
+    mobileMenu.classList.remove('open');
+    menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+  };
+  menuBtn.addEventListener('click', function(){
+    var open = mobileMenu.classList.toggle('open');
+    menuBtn.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 800) closeMenu(); });
+}
 
 // native share (mobile growth loop)
 var shareBtn = document.getElementById('shareBtn');
