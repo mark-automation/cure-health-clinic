@@ -226,6 +226,26 @@ section{padding:72px 0}
 .result-panel p{color:var(--muted);font-size:.92rem;margin-top:8px}
 .ref-chip{display:inline-block;margin-top:14px;background:var(--sky);border:1.5px dashed var(--blue);color:var(--navy);font-weight:800;font-size:1.05rem;letter-spacing:.05em;padding:10px 22px;border-radius:12px}
 .result-actions{display:grid;gap:10px;margin-top:22px}
+
+/* reviews slider */
+.rev-wrap{max-width:560px;margin:0 auto;position:relative}
+.rev-track-wrap{overflow:hidden;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+#revTrack{display:flex;transition:transform .45s ease}
+.rev-slide{min-width:100%;padding:36px 30px 32px;text-align:center}
+.rev-slide .big{font-size:2.6rem;font-weight:800;color:var(--navy);line-height:1.05}
+.rev-slide.stat p{font-size:.95rem;color:var(--text);margin-top:8px}
+.rev-slide .stars{color:#f5a623;font-size:1.15rem;letter-spacing:.15em}
+.rev-slide blockquote{font-size:.98rem;color:var(--text);margin-top:10px;text-wrap:balance}
+.rev-slide cite{display:block;margin-top:12px;font-weight:800;color:var(--navy);font-style:normal;font-size:.86rem}
+.rev-slide .src{display:block;margin-top:4px;font-size:.74rem;color:var(--muted);font-weight:600}
+.dots{display:flex;gap:8px;justify-content:center;padding:16px 0 0}
+#revDots button{width:9px;height:9px;border-radius:50%;background:var(--line);border:none;cursor:pointer;padding:0;transition:.15s}
+#revDots button.on{background:var(--blue);transform:scale(1.2)}
+.rev-nav{position:absolute;top:45%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-size:1.15rem;line-height:1;cursor:pointer;box-shadow:var(--shadow);z-index:2;display:flex;align-items:center;justify-content:center}
+.rev-nav:hover{background:var(--sky)}
+.rev-nav.prev{left:-8px}.rev-nav.next{right:-8px}
+@media(max-width:880px){.rev-nav{display:none}}
+@media(prefers-reduced-motion:reduce){#revTrack{transition:none}}
 @media(max-width:560px){.fgrid{grid-template-columns:1fr;gap:0}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 
@@ -287,6 +307,36 @@ section{padding:72px 0}
 .soc{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;color:var(--text);font-size:.88rem;transition:.15s;background:#fff}
 .soc:hover{border-color:var(--blue);background:var(--sky-2)}
 .soc svg{width:20px;height:20px;flex:none}
+
+/* reviews carousel */
+.rev-stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.rev-stats div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 24px;text-align:center}
+.rev-stats b{display:block;color:var(--navy);font-size:1.3rem;font-weight:800;line-height:1.2}
+.rev-stats span{font-size:.74rem;color:var(--muted)}
+.carousel{position:relative;max-width:720px;margin:0 auto}
+.car-window{overflow:hidden;border-radius:20px}
+.car-track{display:flex;transition:transform .45s ease}
+.rev-slide{flex:0 0 100%;background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 30px;box-sizing:border-box}
+.stars{color:#f5a623;font-size:1.05rem;letter-spacing:.18em;margin-bottom:14px}
+.rev-q{font-size:1.02rem;color:var(--text);line-height:1.65}
+.rev-by{margin-top:20px;display:flex;align-items:center;gap:12px}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex:none}
+.rev-by .who{min-width:0}
+.rev-by .who b{display:block;font-size:.88rem;color:var(--navy)}
+.rev-by .who span{font-size:.74rem;color:var(--muted)}
+.src-badge{margin-left:auto;font-size:.66rem;font-weight:700;background:var(--sky);color:var(--blue);padding:4px 11px;border-radius:999px;white-space:nowrap}
+.stat-slide{text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:200px}
+.stat-slide .huge{font-size:2.7rem;font-weight:800;color:var(--navy);line-height:1.1}
+.stat-slide p{color:var(--muted);font-size:.92rem;margin-top:8px}
+.car-btn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:#fff;color:var(--navy);font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:var(--shadow-lg);z-index:5;display:flex;align-items:center;justify-content:center}
+.car-btn:hover{color:var(--coral)}
+.car-btn.prev{left:-12px}.car-btn.next{right:-12px}
+.car-dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.car-dot{width:8px;height:8px;border-radius:999px;background:var(--line);border:none;padding:0;cursor:pointer;transition:.25s}
+.car-dot.on{background:var(--coral);width:24px}
+.follow-note{text-align:center;margin-top:36px;font-size:.82rem;color:var(--muted);font-weight:600}
+.follow-note + .socials{margin-top:14px}
+@media(max-width:880px){.car-btn{display:none}.rev-slide{padding:26px 20px}.stat-slide .huge{font-size:2.2rem}}
 
 /* footer */
 footer{background:var(--navy-deep);color:#9db8d2;padding:46px 0 110px;font-size:.85rem}
@@ -487,7 +537,7 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
       <div class="result-panel" id="bookSuccess" role="status" aria-live="polite">
         <div class="big">✅</div>
         <h3>Booking request sent!</h3>
-        <p id="successMsg">We've received your request. Our staff will confirm your slot via SMS during clinic hours (8 AM – 5 PM).</p>
+        <p id="successMsg">Your request is saved on our clinic calendar. Our staff will confirm your exact time via SMS during clinic hours (8 AM – 5 PM).</p>
         <div class="ref-chip" id="refChip">REF</div>
         <p style="font-size:.82rem;margin-top:14px">📸 Screenshot or write down your reference code.<br><b>Payment is on visit — nothing to pay now.</b></p>
         <div class="result-actions">
@@ -501,6 +551,7 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
         <h3>Almost there!</h3>
         <p id="fallbackMsg">We couldn't save your booking automatically — but your details are ready. Tap below and we'll get your slot locked in seconds.</p>
         <div class="result-actions">
+          <a class="btn btn-green" id="gcalAddFb" href="#" target="_blank" rel="noopener">📅 Add to Google Calendar</a>
           <a class="btn btn-primary" id="fallbackSms" href="#">📱 Send my booking via SMS</a>
           <button class="btn btn-outline" type="button" id="retryBook">Try again</button>
         </div>
@@ -708,14 +759,65 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
 }
 </script>
 
-<!-- ============ CONTACT / SOCIALS ============ -->
+<!-- ============ REVIEWS SLIDER ============ -->
+
+<!-- ============ REVIEWS / SOCIALS ============ -->
 <section id="contact" style="padding-top:0">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="kicker">Stay Connected</div>
-      <h2>Follow Cure Health</h2>
-      <p>Announcements, health tips and prenatal milestones — join our community.</p>
+      <div class="kicker">Patient Stories</div>
+      <h2>What patients say</h2>
+      <p>Real words from real patients — from our Facebook and Google reviews.</p>
     </div>
+
+    <div class="rev-stats reveal">
+      <div><b>91%</b><span>avg. recommend rate</span></div>
+      <div><b>35+</b><span>Facebook reviews</span></div>
+      <div><b>5★</b><span>patient ratings shown</span></div>
+    </div>
+
+    <div class="carousel reveal" id="revCarousel" aria-roledescription="carousel" aria-label="Patient reviews">
+      <button class="car-btn prev" type="button" aria-label="Previous review">‹</button>
+      <div class="car-window">
+        <div class="car-track">
+          <article class="rev-slide">
+            <div class="stars">★★★★★</div>
+            <p class="rev-q">“Had a great experience with Cure Health Kawit Cavite. Nice ang staff and clean ang clinic. Kaya dito talaga kami bumabalik kahit medyo malayo sa'min kase maganda service.”</p>
+            <div class="rev-by">
+              <div class="avatar">K</div>
+              <div class="who"><b>Kerlyn May de Raya</b><span>Facebook review · Aug 2026 · Kawit branch</span></div>
+              <span class="src-badge">Facebook</span>
+            </div>
+          </article>
+          <article class="rev-slide">
+            <div class="stars">★★★★★</div>
+            <p class="rev-q">“I recommend this Curehealth diagnostic — the staff are very accommodating, the clinic is clean, appointments are so easy to book. If you need general medical care, it's a reliable option.”</p>
+            <div class="rev-by">
+              <div class="avatar">J</div>
+              <div class="who"><b>Jovi S. Lyn</b><span>Facebook review · Aug 2026 · Imus branch</span></div>
+              <span class="src-badge">Facebook</span>
+            </div>
+          </article>
+          <article class="rev-slide">
+            <div class="stars">★★★★★</div>
+            <p class="rev-q">“Highly recommend this clinic near Robinsons Imus — they offer CAS and 3D/4D ultrasound especially for first-time mommies. Super affordable! The line can be long but the service is fast.”</p>
+            <div class="rev-by">
+              <div class="avatar">G</div>
+              <div class="who"><b>Google reviewer</b><span>Google review · Imus branch</span></div>
+              <span class="src-badge">Google</span>
+            </div>
+          </article>
+          <article class="rev-slide stat-slide">
+            <div class="huge">90% &amp; 92%</div>
+            <p>recommend rates on Facebook — Kawit (15 reviews) and Imus (20 reviews).<br><b style="color:var(--navy)">Thank you for trusting us with your health. 💙</b></p>
+          </article>
+        </div>
+      </div>
+      <button class="car-btn next" type="button" aria-label="Next review">›</button>
+      <div class="car-dots" role="tablist" aria-label="Choose review"></div>
+    </div>
+
+    <p class="follow-note reveal">Want more? Follow us for announcements and health tips:</p>
     <div class="socials reveal">
       <a class="soc" href="https://www.facebook.com/profile.php?id=61586863105008" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2.4h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
@@ -910,6 +1012,7 @@ if(form){
     function finishFallback(msg){
       if(msg) document.getElementById('fallbackMsg').textContent = msg;
       document.getElementById('fallbackSms').href = smsHref(d.branch, buildSmsText(d));
+      document.getElementById('gcalAddFb').href = gcalHref(d);
       show(fallbackPanel);
       submitBtn.disabled = false; submitBtn.textContent = 'Send Booking Request →';
     }
@@ -940,6 +1043,46 @@ if(form){
   });
   document.getElementById('retryBook').addEventListener('click', resetToForm);
 }
+
+// reviews carousel
+(function(){
+  var car = document.getElementById('revCarousel');
+  if(!car) return;
+  var track = car.querySelector('.car-track'),
+      dots  = car.querySelector('.car-dots'),
+      slides = track.children.length, i = 0, timer = null;
+  for(var k=0;k<slides;k++){
+    var d = document.createElement('button');
+    d.type='button'; d.className='car-dot'+(k?'':' on');
+    d.setAttribute('aria-label','Show review '+(k+1));
+    (function(n){ d.addEventListener('click',function(){ go(n); restart(); }); })(k);
+    dots.appendChild(d);
+  }
+  function go(n){
+    i = (n+slides)%slides;
+    track.style.transform = 'translateX(-'+(i*100)+'%)';
+    Array.prototype.forEach.call(dots.children,function(x,j){ x.classList.toggle('on', j===i); });
+  }
+  function next(){ go(i+1); }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  function restart(){
+    stop();
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(next, 5200);
+  }
+  car.querySelector('.car-btn.prev').addEventListener('click',function(){ go(i-1); restart(); });
+  car.querySelector('.car-btn.next').addEventListener('click',function(){ go(i+1); restart(); });
+  ['pointerenter','touchstart'].forEach(function(ev){ car.addEventListener(ev, stop, {passive:true}); });
+  ['pointerleave','touchend'].forEach(function(ev){ car.addEventListener(ev, restart, {passive:true}); });
+  var sx = null;
+  car.addEventListener('touchstart',function(e){ sx = e.touches[0].clientX; },{passive:true});
+  car.addEventListener('touchend',function(e){
+    if(sx===null) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    if(Math.abs(dx) > 42) go(i + (dx < 0 ? 1 : -1));
+    sx = null;
+  },{passive:true});
+  restart();
+})();
 
 // open-now indicator (PH time UTC+8)
 (function(){
