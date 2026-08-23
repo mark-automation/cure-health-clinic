@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cure Health Diagnostic &amp; Ultrasound Clinic — Ultrasound, Lab, CT Scan &amp; 2D Echo in Kawit &amp; Imus, Cavite</title>
+<meta name="description" content="Cure Health Diagnostic and Ultrasound Clinic LTD. Co. — OB & general ultrasound (2D/3D/4D), laboratory, CT scan, 2D echo, duplex scan and doctor consultations in Kawit and Imus, Cavite. Open 7 days a week. Book your appointment online, by SMS or by phone.">
+<meta property="og:title" content="Cure Health Diagnostic & Ultrasound Clinic — Kawit & Imus, Cavite">
+<meta property="og:description" content="Ultrasound • Laboratory • CT Scan • 2D Echo • Duplex Scan • Consultations. Open 7 days a week. Book online in minutes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Cure Health Diagnostic and Ultrasound Clinic LTD. Co.",
+  "description": "Diagnostic clinic offering ultrasound (OB-gyne and general), laboratory, CT scan, 2D echo, duplex scan and consultations.",
+  "url": "https://mark-automation.github.io/cure-health-clinic/",
+  "logo": "assets/logo.png",
+  "telephone": "+63 956 183 9860",
+  "email": "curehealthkawit@gmail.com",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61586863105008",
+    "https://www.instagram.com/curehealthresults/",
+    "https://www.tiktok.com/@curehealthest2025"
+  ],
+  "medicalSpecialty": ["Obstetric", "Radiology", "Cardiovascular"],
+  "availableService": [
+    {"@type": "MedicalProcedure", "name": "OB-Gyne Ultrasound (2D/3D/4D)"},
+    {"@type": "MedicalProcedure", "name": "General Ultrasound"},
+    {"@type": "MedicalTest", "name": "Laboratory"},
+    {"@type": "MedicalTest", "name": "CT Scan"},
+    {"@type": "MedicalTest", "name": "2D Echocardiogram"},
+    {"@type": "MedicalTest", "name": "Duplex Scan"},
+    {"@type": "MedicalProcedure", "name": "Doctor Consultation"}
+  ],
+  "department": [
+    {
+      "@type": "MedicalClinic",
+      "name": "Cure Health — Kawit",
+      "telephone": "+63 956 183 9860",
+      "email": "curehealthkawit@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A-3 Ground Floor, ASJ Building, Centennial Road, Batong Dalig",
+        "addressLocality": "Kawit",
+        "addressRegion": "Cavite",
+        "postalCode": "4103",
+        "addressCountry": "PH"
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "17:30"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "17:00"}
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "name": "Cure Health — Imus",
+      "telephone": "+63 926 681 4232",
+      "email": "curehealth.duc@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Seven One Building, Tanzang Luma V (near Robinsons Imus)",
+        "addressLocality": "Imus",
+        "addressRegion": "Cavite",
+        "postalCode": "4103",
+        "addressCountry": "PH"
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "17:00"}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --navy:#0a3560; --navy-deep:#072746;
+  --blue:#1266b4; --blue-bright:#1d82e8;
+  --sky:#e9f3fc; --sky-2:#f6fafe;
+  --coral:#ff6b57; --coral-dark:#e5533f;
+  --teal:#12a5a5;
+  --text:#22303f; --muted:#5b6b7c;
+  --white:#fff; --line:#dde8f2;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(10,53,96,.08);
+  --shadow-lg:0 18px 50px rgba(10,53,96,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--text);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand img{height:42px;width:auto}
+.brand .name{font-weight:800;font-size:.95rem;color:var(--navy);line-height:1.15}
+.brand .tag{font-size:.68rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;gap:26px;align-items:center;font-weight:600;font-size:.92rem}
+.nav-links a{color:var(--text)}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:12px 22px;font-weight:700;font-size:.95rem;cursor:pointer;border:none;transition:.18s;line-height:1.2}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 6px 18px rgba(255,107,87,.35)}
+.btn-primary:hover{background:var(--coral-dark);transform:translateY(-1px)}
+.btn-outline{border:2px solid var(--blue);color:var(--blue);background:transparent;padding:10px 20px}
+.btn-outline:hover{background:var(--blue);color:#fff}
+.btn-white{background:#fff;color:var(--navy);box-shadow:var(--shadow)}
+.btn-white:hover{transform:translateY(-1px)}
+.btn-sm{padding:9px 16px;font-size:.85rem}
+@media(max-width:800px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(150deg,var(--navy) 0%,var(--blue) 78%,#2a86dd 100%);color:#fff;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,.10)}
+.hero::before{width:520px;height:520px;top:-220px;right:-120px}
+.hero::after{width:380px;height:380px;top:-60px;right:180px;border-color:rgba(255,255,255,.06)}
+.hero-inner{position:relative;z-index:2;padding:72px 0 84px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:800;line-height:1.14;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:#ffd7cf}
+.hero p.sub{margin-top:18px;font-size:1.06rem;color:#dbeaf9;max-width:34em}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:600;backdrop-filter:blur(4px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:26px;backdrop-filter:blur(8px)}
+.hero-card h3{font-size:1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.hero-card .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:.88rem}
+.hero-card .row:last-child{border-bottom:none}
+.hero-card .row b{font-weight:700;white-space:nowrap}
+.hero-card .open-now{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:#8ef0c8;font-size:.85rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#2ed390;box-shadow:0 0 0 4px rgba(46,211,144,.25)}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;padding:56px 0 66px}.hero-card{order:-1}}
+
+/* ---------- sections ---------- */
+section{padding:76px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 44px}
+.sec-head .kicker{color:var(--coral);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}
+.sec-head h2{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--navy);font-weight:800;margin-top:8px;letter-spacing:-.01em}
+.sec-head p{color:var(--muted);margin-top:10px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.2s;position:relative;overflow:hidden}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#bcd6ee}
+.svc .icon{width:52px;height:52px;border-radius:14px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc .icon svg{width:27px;height:27px;stroke:var(--blue)}
+.svc h3{font-size:1.05rem;color:var(--navy);font-weight:700}
+.svc p{font-size:.89rem;color:var(--muted);margin-top:8px}
+.svc .branch-note{margin-top:14px;font-size:.74rem;font-weight:700;color:var(--teal);letter-spacing:.02em}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* booking */
+#book{background:linear-gradient(180deg,var(--sky-2),var(--sky))}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:38px}
+.step{background:#fff;border-radius:var(--radius);padding:20px;border:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+.step .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.step h4{font-size:.95rem;color:var(--navy)}
+.step p{font-size:.83rem;color:var(--muted);margin-top:3px}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:26px;flex-wrap:wrap}
+.tab{padding:11px 26px;border-radius:999px;border:2px solid var(--line);background:#fff;font-weight:700;color:var(--muted);cursor:pointer;font-size:.92rem;transition:.15s}
+.tab.active{border-color:var(--navy);color:var(--navy);background:#fff;box-shadow:var(--shadow)}
+.branch-panel{display:none}
+.branch-panel.active{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;animation:fadeUp .35s ease}
+@media(max-width:880px){.branch-panel.active{grid-template-columns:1fr}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.bcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.bcard h3{color:var(--navy);font-size:1.25rem;font-weight:800}
+.bcard .addr{color:var(--muted);font-size:.92rem;margin-top:6px}
+.hours-table{margin-top:16px;font-size:.87rem}
+.hours-table .hrow{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line)}
+.hours-table .hrow:last-child{border-bottom:none}
+.hours-table .hrow span:last-child{font-weight:600}
+.contact-actions{display:grid;gap:10px;margin-top:20px}
+.cbtn{display:flex;align-items:center;gap:12px;padding:13px 18px;border-radius:12px;font-weight:700;font-size:.93rem;border:1.5px solid var(--line);background:#fff;color:var(--text);transition:.15s}
+.cbtn:hover{border-color:var(--blue);background:var(--sky-2)}
+.cbtn svg{width:21px;height:21px;flex:none}
+.cbtn small{margin-left:auto;color:var(--muted);font-weight:600;font-size:.76rem}
+.embed-wrap{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.embed-head{padding:18px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.embed-head h4{color:var(--navy);font-size:1rem}
+.embed-head p{font-size:.8rem;color:var(--muted)}
+#iframeHolder{position:relative;min-height:420px;background:linear-gradient(180deg,#fbfdff,#eff6fc)}
+#iframeHolder iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.embed-fallback{padding:12px 24px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);text-align:center}
+.prep{margin-top:34px;background:#fff;border-radius:var(--radius);border:1px solid var(--line);overflow:hidden}
+.prep summary{list-style:none;cursor:pointer;padding:18px 24px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:10px;font-size:.95rem}
+.prep summary::-webkit-details-marker{display:none}
+.prep summary::after{content:"+";margin-left:auto;font-size:1.3rem;color:var(--coral);font-weight:400}
+.prep[open] summary::after{content:"–"}
+.prep .prep-body{padding:0 24px 20px;font-size:.88rem;color:var(--muted)}
+.prep .prep-body ul{padding-left:20px;display:grid;gap:8px;margin-top:6px}
+.prep .prep-body b{color:var(--text)}
+
+/* trust strip */
+.trust{background:var(--navy);color:#fff;padding:34px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.trust b{font-size:1.5rem;display:block;font-weight:800}
+.trust span{font-size:.82rem;color:#b9d4ec}
+@media(max-width:720px){.trust-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* branches */
+.br-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:820px){.br-grid{grid-template-columns:1fr}}
+.br-card{border:1px solid var(--line);border-radius:20px;padding:30px;background:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.br-card .pill{align-self:flex-start;background:var(--sky);color:var(--blue);font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:5px 12px;border-radius:999px;text-transform:uppercase}
+.br-card h3{color:var(--navy);font-weight:800;font-size:1.3rem;margin-top:12px}
+.br-card p{color:var(--muted);font-size:.92rem;margin-top:6px}
+.br-card .hrs{margin-top:14px;font-size:.87rem}
+.br-card .hrs div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--line)}
+.br-card .actions{display:flex;gap:10px;margin-top:auto;padding-top:22px;flex-wrap:wrap}
+
+/* socials */
+.socials{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.soc{display:flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;border:1.5px solid var(--line);font-weight:700;color:var(--text);font-size:.9rem;transition:.15s;background:#fff}
+.soc:hover{border-color:var(--blue);background:var(--sky-2);transform:translateY(-2px)}
+.soc svg{width:20px;height:20px}
+
+/* footer */
+footer{background:var(--navy-deep);color:#9db8d2;padding:48px 0 110px;font-size:.85rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}
+footer a{color:#cfe2f4}
+footer .fineprint{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:.75rem;color:#7290ad;text-align:center}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+
+/* sticky mobile bar */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.mobile-bar .btn{flex:1;padding:13px}
+@media(max-width:800px){.mobile-bar{display:flex}footer{padding-bottom:130px}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:.6s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="Cure Health Diagnostic and Ultrasound Clinic logo">
+      <span class="name">Cure Health<br><span class="tag">Diagnostic &amp; Ultrasound Clinic</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+      <a href="#branches">Branches</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary btn-sm" href="#book">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" style="padding:0">
+  <div class="container hero-inner">
+    <div>
+      <h1>Accurate diagnostics.<br><em>Genuine care.</em><br>Right here in Cavite.</h1>
+      <p class="sub">Ultrasound, laboratory, CT scan, 2D echo and doctor consultations — two branches, open <b>7 days a week</b>. Skip the line and book your slot before you arrive.</p>
+      <div class="hero-chips">
+        <span class="chip">🩺 2D · 3D · 4D Ultrasound</span>
+        <span class="chip">🧪 On-site Laboratory</span>
+        <span class="chip">🖥️ CT Scan</span>
+        <span class="chip">👶 Prenatal care partner</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#book" style="padding:15px 30px">Book an Appointment</a>
+        <a class="btn btn-white" href="tel:+639561839860" style="padding:15px 30px">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2.1z"/></svg>
+          Call Kawit Branch
+        </a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Opening hours summary">
+      <h3><span class="dot"></span><span class="open-now" data-open-now>Checking hours…</span></h3>
+      <div class="row"><span>Kawit · Mon–Fri</span><b>8:00 AM – 5:00 PM</b></div>
+      <div class="row"><span>Kawit · Saturday</span><b>8:00 AM – 5:30 PM</b></div>
+      <div class="row"><span>Kawit · Sunday</span><b>8:00 AM – 5:00 PM</b></div>
+      <div class="row"><span>Imus · Daily</span><b>8:00 AM – 5:00 PM</b></div>
+      <div class="row"><span style="color:#ffd7cf;font-weight:700">Walk-ins are welcome — booked patients are prioritized.</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker">Our Services</div>
+      <h2>Everything you need for a clearer picture of your health</h2>
+      <p>From routine labs to advanced imaging — one clinic, two convenient locations.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M2 12h3l2-7 3 14 3-10 2 5 2-2h5"/></svg></div>
+        <h3>OB-Gyne Ultrasound</h3>
+        <p>Pregnancy tracking, congenital anomaly scan (CAS) and 3D/4D imaging — safe, gentle scans for you and your baby at every milestone.</p>
+        <div class="branch-note">Available at both branches</div>
+      </div>
+      <div class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="12" r="7"/><path d="M21 12h-4l-2 3-2-6-2 3H3"/></svg></div>
+        <h3>General Ultrasound</h3>
+        <p>Abdomen, thyroid, breast, KUB and soft-tissue scans using modern ultrasound equipment, read with care.</p>
+        <div class="branch-note">Available at both branches</div>
+      </div>
+      <div class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 2v6l-5 8a3 3 0 0 0 2.6 4.5h10.8A3 3 0 0 0 20 16l-5-8V2"/><path d="M7 2h10"/></svg></div>
+        <h3>Laboratory</h3>
+        <p>CBC, blood chemistry, urinalysis, drug tests and more — accurate results from our on-site lab.</p>
+        <div class="branch-note">Available at both branches</div>
+      </div>
+      <div class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>CT Scan</h3>
+        <p>Detailed cross-sectional imaging when your doctor needs a closer look — fast scheduling, clear reports.</p>
+        <div class="branch-note">Available at both branches</div>
+      </div>
+      <div class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20.8 8.6a5.5 5.5 0 0 0-8.8-1.5L12 7l-.1-.1a5.5 5.5 0 0 0-7.8 7.8l7.9 7.8 7.9-7.8a5.5 5.5 0 0 0 .9-6.1z"/><path d="M7 12h2l1.5-2.5L12 14l1.5-2H17"/></svg></div>
+        <h3>2D Echo &amp; Duplex Scan</h3>
+        <p>Echocardiography and vascular duplex studies to check your heart and circulation in detail.</p>
+        <div class="branch-note">By appointment</div>
+      </div>
+      <div class="svc reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Doctor Consultations</h3>
+        <p>OB-gyne and general medicine consults — discuss your results and get a plan, all under one roof.</p>
+        <div class="branch-note">Imus branch · both specialties</div>
+      </div>
+    </div>
+
+    <details class="prep reveal">
+      <summary>📋 Exam preparation guide — how to get ready for your test</summary>
+      <div class="prep-body">
+        <ul>
+          <li><b>Abdominal ultrasound:</b> Fast for 6–8 hours before your slot (water is fine). No smoking or chewing gum.</li>
+          <li><b>Pelvic / early pregnancy ultrasound:</b> Drink 4–6 glasses of water about an hour before and hold your bladder — a full bladder gives clearer images.</li>
+          <li><b>Whole abdomen / KUB:</b> Both fasting and full-bladder prep apply.</li>
+          <li><b>Thyroid, breast, soft tissue, 2D echo:</b> No special preparation needed.</li>
+          <li><b>Blood tests:</b> Some tests require fasting — confirm with us when booking.</li>
+          <li>Bring your doctor's referral slip if you have one, and a valid ID. Our staff will confirm any specific instructions when we confirm your appointment.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section id="book">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker">Book Your Visit</div>
+      <h2>Reserve your slot in under 2 minutes</h2>
+      <p>Choose how you'd like to book — online form, quick SMS, Viber, or a direct call. We'll confirm your schedule and let you know if any prep is needed.</p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step"><div class="n">1</div><div><h4>Pick your service &amp; branch</h4><p>Not sure what you need? Just tell us what your doctor asked for.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Choose a date &amp; time</h4><p>Morning slots are best for fasting exams.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>We confirm your booking</h4><p>You'll receive a confirmation — plus reminders so you never miss a slot.</p></div></div>
+    </div>
+
+    <div class="tabs reveal" role="tablist" aria-label="Choose branch">
+      <button class="tab active" data-branch="kawit" role="tab" aria-selected="true">🏥 Kawit Branch</button>
+      <button class="tab" data-branch="imus" role="tab" aria-selected="false">🏥 Imus Branch</button>
+    </div>
+
+    <!-- KAWIT -->
+    <div class="branch-panel active" id="panel-kawit">
+      <div class="bcard">
+        <h3>Kawit — Main Clinic</h3>
+        <p class="addr">A-3 Ground Floor, ASJ Building, Centennial Road, Batong Dalig, Kawit, 4103 Cavite</p>
+        <div class="hours-table">
+          <div class="hrow"><span>Monday – Friday</span><span>8:00 AM – 5:00 PM</span></div>
+          <div class="hrow"><span>Saturday</span><span>8:00 AM – 5:30 PM</span></div>
+          <div class="hrow"><span>Sunday</span><span>8:00 AM – 5:00 PM</span></div>
+        </div>
+        <div class="contact-actions">
+          <a class="cbtn" href="tel:+639561839860">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2.1z"/></svg>
+            Call <small>0956 183 9860</small>
+          </a>
+          <a class="cbtn" href="sms:+639561839860?body=Hi%20Cure%20Health%20Kawit!%20I%27d%20like%20to%20book%20an%20appointment.%0A%0AName%3A%20%0AService%2FExam%3A%20%0APreferred%20date%20%26%20time%3A%20">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Book via SMS <small>auto-filled message</small>
+          </a>
+          <a class="cbtn" href="viber://chat?number=%2B639561839860">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 20l1-5.4a8.3 8.3 0 0 1-1-4A8.4 8.4 0 0 1 11.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg>
+            Book via Viber <small>opens Viber chat</small>
+          </a>
+          <a class="cbtn" href="mailto:curehealthkawit@gmail.com?subject=Appointment%20Request&body=Hi%20Cure%20Health%20Kawit%2C%0A%0AName%3A%20%0ABirthdate%3A%20%0AService%2FExam%3A%20%0APreferred%20date%20%26%20time%3A%20%0AContact%20number%3A%20%0A%0AThank%20you!">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email us <small>curehealthkawit@gmail.com</small>
+          </a>
+        </div>
+      </div>
+      <div class="embed-wrap">
+        <div class="embed-head">
+          <div>
+            <h4>📅 Online Booking Form</h4>
+            <p>Official Cure Health booking system — pick your exam, date &amp; time. We'll email your confirmation.</p>
+          </div>
+          <a class="btn btn-outline btn-sm" href="https://script.google.com/macros/s/AKfycbyzkqKblo1MrQUhf7ntYa7b0f_BBrmQPCjBzeKnBgr_2vv1QaRqpHzJqT8sakMUq2E9/exec" target="_blank" rel="noopener">Open full screen ↗</a>
+        </div>
+        <div id="iframeHolder" data-src="https://script.google.com/macros/s/AKfycbyzkqKblo1MrQUhf7ntYa7b0f_BBrmQPCjBzeKnBgr_2vv1QaRqpHzJqT8sakMUq2E9/exec">
+          <noscript><iframe src="https://script.google.com/macros/s/AKfycbyzkqKblo1MrQUhf7ntYa7b0f_BBrmQPCjBzeKnBgr_2vv1QaRqpHzJqT8sakMUq2E9/exec" title="Cure Health online booking form"></iframe></noscript>
+        </div>
+        <div class="embed-fallback">Form not loading? Tap “Open full screen” above, or message us on Facebook — we reply during clinic hours.</div>
+      </div>
+    </div>
+
+    <!-- IMUS -->
+    <div class="branch-panel" id="panel-imus">
+      <div class="bcard">
+        <h3>Imus Branch</h3>
+        <p class="addr">Seven One Building, Tanzang Luma V, Imus, 4103 Cavite — near Robinsons Imus</p>
+        <div class="hours-table">
+          <div class="hrow"><span>Monday – Sunday</span><span>8:00 AM – 5:00 PM</span></div>
+        </div>
+        <div class="contact-actions">
+          <a class="cbtn" href="tel:+639266814232">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2.1z"/></svg>
+            Call <small>0926 681 4232</small>
+          </a>
+          <a class="cbtn" href="tel:+639478406949">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2.1z"/></svg>
+            Call <small>0947 840 6949</small>
+          </a>
+          <a class="cbtn" href="sms:+639266814232?body=Hi%20Cure%20Health%20Imus!%20I%27d%20like%20to%20book%20an%20appointment.%0A%0AName%3A%20%0AService%2FExam%3A%20%0APreferred%20date%20%26%20time%3A%20">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Book via SMS <small>auto-filled message</small>
+          </a>
+          <a class="cbtn" href="viber://chat?number=%2B639266814232">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 20l1-5.4a8.3 8.3 0 0 1-1-4A8.4 8.4 0 0 1 11.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg>
+            Book via Viber <small>opens Viber chat</small>
+          </a>
+          <a class="cbtn" href="mailto:curehealth.duc@gmail.com?subject=Appointment%20Request&body=Hi%20Cure%20Health%20Imus%2C%0A%0AName%3A%20%0ABirthdate%3A%20%0AService%2FExam%3A%20%0APreferred%20date%20%26%20time%3A%20%0AContact%20number%3A%20%0A%0AThank%20you!">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email us <small>curehealth.duc@gmail.com</small>
+          </a>
+        </div>
+      </div>
+      <div class="embed-wrap">
+        <div class="embed-head">
+          <div>
+            <h4>💬 Prefer Messenger?</h4>
+            <p>The Imus team is most responsive on Facebook — send them your details and they'll lock in your slot.</p>
+          </div>
+          <a class="btn btn-primary btn-sm" href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F61573464610524" target="_blank" rel="noopener">Message Imus ↗</a>
+        </div>
+        <div style="padding:28px;display:grid;gap:14px">
+          <p style="font-size:.92rem;color:var(--muted)">Booking tips for a smooth visit:</p>
+          <div style="display:grid;gap:12px;font-size:.9rem">
+            <div style="display:flex;gap:10px"><span>✅</span><span>Send your <b>name, exam, preferred date &amp; time</b> — that's all we need to start.</span></div>
+            <div style="display:flex;gap:10px"><span>✅</span><span>Fasting exams? Ask for a <b>morning slot</b> when you book.</span></div>
+            <div style="display:flex;gap:10px"><span>✅</span><span>Bring your referral slip and previous results if any.</span></div>
+            <div style="display:flex;gap:10px"><span>✅</span><span>Walk-ins accepted — booked patients are prioritized.</span></div>
+          </div>
+          <div style="margin-top:6px;padding:16px;background:var(--sky);border-radius:12px;font-size:.85rem;color:var(--navy)">
+            💡 The full online booking form below works for <b>both branches</b> — just mention Imus as your preferred branch in the notes.
+          </div>
+        </div>
+        <div id="iframeHolder2" data-src="https://script.google.com/macros/s/AKfycbyzkqKblo1MrQUhf7ntYa7b0f_BBrmQPCjBzeKnBgr_2vv1QaRqpHzJqT8sakMUq2E9/exec" style="position:relative;min-height:420px;background:linear-gradient(180deg,#fbfdff,#eff6fc)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust">
+  <div class="container trust-grid">
+    <div><b>2</b><span>Convenient branches</span></div>
+    <div><b>7 days</b><span>Open every week</span></div>
+    <div><b>92%</b><span>Facebook recommend rate</span></div>
+    <div><b>&lt;2 min</b><span>To request a booking</span></div>
+  </div>
+</div>
+
+<!-- ============ BRANCHES ============ -->
+<section id="branches">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker">Find Us</div>
+      <h2>Two branches across Cavite</h2>
+    </div>
+    <div class="br-grid">
+      <div class="br-card reveal">
+        <span class="pill">Main Clinic</span>
+        <h3>Kawit</h3>
+        <p>A-3 Ground Floor, ASJ Building, Centennial Road, Batong Dalig, Kawit, 4103 Cavite</p>
+        <div class="hrs">
+          <div><span>Mon – Fri</span><b>8:00 AM – 5:00 PM</b></div>
+          <div><span>Saturday</span><b>8:00 AM – 5:30 PM</b></div>
+          <div><span>Sunday</span><b>8:00 AM – 5:00 PM</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary btn-sm" href="tel:+639561839860">📞 0956 183 9860</a>
+          <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&query=Cure+Health+Diagnostic+and+Ultrasound+Clinic+ASJ+Building+Centennial+Road+Batong+Dalig+Kawit+Cavite" target="_blank" rel="noopener">🗺️ Get Directions</a>
+        </div>
+      </div>
+      <div class="br-card reveal">
+        <span class="pill">Branch</span>
+        <h3>Imus</h3>
+        <p>Seven One Building, Tanzang Luma V, Imus, 4103 Cavite — near Robinsons Imus</p>
+        <div class="hrs">
+          <div><span>Mon – Sun</span><b>8:00 AM – 5:00 PM</b></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary btn-sm" href="tel:+639266814232">📞 0926 681 4232</a>
+          <a class="btn btn-outline btn-sm" href="https://www.google.com/maps/search/?api=1&query=Cure+Health+Diagnostic+and+Ultrasound+Clinic+Seven+One+Building+Tanzang+Luma+Imus+Cavite" target="_blank" rel="noopener">🗺️ Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / SOCIALS ============ -->
+<section id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker">Stay Connected</div>
+      <h2>Follow Cure Health</h2>
+      <p>Announcements, health tips and prenatal milestones — join our community.</p>
+    </div>
+    <div class="socials reveal">
+      <a class="soc" href="https://www.facebook.com/profile.php?id=61586863105008" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2.4h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+        Facebook · Kawit
+      </a>
+      <a class="soc" href="https://www.facebook.com/people/Cure-Health-Diagnostic-and-Ultrasound-Clinic-LTDCO/61573464610524/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 1-2 2v2.4h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+        Facebook · Imus
+      </a>
+      <a class="soc" href="https://www.instagram.com/curehealthresults/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#c13584"/></svg>
+        @curehealthresults
+      </a>
+      <a class="soc" href="https://www.tiktok.com/@curehealthest2025" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="#000"><path d="M19.6 5.8a5 5 0 0 1-3.5-4.3V1h-3.4v13.4a2.9 2.9 0 1 1-2-2.7V8.2a6.3 6.3 0 1 0 5.4 6.2V8.9a8.3 8.3 0 0 0 4.5 1.3V6.9a5 5 0 0 1-1-1.1z"/></svg>
+        TikTok
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="foot">
+  <div class="container foot-grid">
+    <div>
+      <img src="assets/logo.png" alt="Cure Health logo" style="height:52px;background:#fff;border-radius:10px;padding:6px;margin-bottom:14px">
+      <p>Cure Health Diagnostic and Ultrasound Clinic LTD. Co.<br>Your Health, Our Priority.</p>
+    </div>
+    <div>
+      <h4>Kawit</h4>
+      <p>A-3 GF, ASJ Bldg, Centennial Rd, Batong Dalig, Kawit, Cavite<br>
+      <a href="tel:+639561839860">0956 183 9860</a><br>
+      <a href="mailto:curehealthkawit@gmail.com">curehealthkawit@gmail.com</a></p>
+    </div>
+    <div>
+      <h4>Imus</h4>
+      <p>Seven One Bldg, Tanzang Luma V, Imus, Cavite<br>
+      <a href="tel:+639266814232">0926 681 4232</a> · <a href="tel:+639478406949">0947 840 6949</a><br>
+      <a href="mailto:curehealth.duc@gmail.com">curehealth.duc@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="container fineprint">
+    © <span id="yr">2026</span> Cure Health Diagnostic and Ultrasound Clinic LTD. Co. · Kawit &amp; Imus, Cavite, Philippines · Open daily 8:00 AM – 5:00 PM
+  </div>
+</footer>
+
+<!-- sticky mobile action bar -->
+<div class="mobile-bar">
+  <a class="btn btn-outline" href="tel:+639561839860">📞 Call</a>
+  <a class="btn btn-primary" href="#book">📅 Book Now</a>
+</div>
+
+<script>
+// year
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// branch tabs
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');x.setAttribute('aria-selected','false')});
+    t.classList.add('active'); t.setAttribute('aria-selected','true');
+    document.querySelectorAll('.branch-panel').forEach(function(p){p.classList.remove('active')});
+    document.getElementById('panel-'+t.dataset.branch).classList.add('active');
+    lazyIframe();
+  });
+});
+
+// lazy-load booking iframes (only when visible)
+var loaded = {};
+function lazyIframe(){
+  document.querySelectorAll('[data-src]').forEach(function(h){
+    if(loaded[h.id]) return;
+    var r = h.getBoundingClientRect();
+    if(r.top < window.innerHeight + 300 && r.bottom > -300){
+      var f = document.createElement('iframe');
+      f.src = h.getAttribute('data-src');
+      f.title = 'Cure Health online booking form';
+      f.loading = 'lazy';
+      f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+      h.appendChild(f);
+      loaded[h.id] = true;
+    }
+  });
+}
+window.addEventListener('scroll', lazyIframe, {passive:true});
+window.addEventListener('resize', lazyIframe);
+lazyIframe();
+
+// open-now indicator (PH time UTC+8)
+(function(){
+  function phNow(){ return new Date(Date.now() + (480 + new Date().getTimezoneOffset())*60000); }
+  var el = document.querySelector('[data-open-now]');
+  function check(){
+    var n = phNow(), day = n.getDay(), mins = n.getHours()*60 + n.getMinutes();
+    // kawit hours as representative: mon-fri 480-1020, sat 480-1050, sun 480-1020
+    var open = false;
+    if(day>=1 && day<=5) open = mins>=480 && mins<1020;
+    else if(day===6)     open = mins>=480 && mins<1050;
+    else                 open = mins>=480 && mins<1020;
+    el.innerHTML = open ? '<span class="dot"></span> Open right now — walk on in!' : ' Currently closed — bookings online anytime!';
+    el.className = open ? 'open-now' : '';
+    el.style.color = open ? '#8ef0c8' : '#ffd7cf';
+  }
+  check(); setInterval(check, 60000);
+})();
+
+// reveal on scroll
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+
+</body>
+</html>
