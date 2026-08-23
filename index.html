@@ -263,6 +263,23 @@ section{padding:72px 0}
 .cbtn:hover{border-color:var(--blue);background:var(--sky-2)}
 .cbtn svg{width:19px;height:19px;flex:none}
 .fb-proof{margin-top:12px;font-size:.79rem;font-weight:700;color:var(--teal)}
+
+/* reviews carousel */
+.rev-wrap{position:relative;max-width:680px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.rev-track{display:flex;transition:transform .38s ease;touch-action:pan-y}
+.rev-slide{flex:0 0 100%;padding:30px 26px;text-align:center}
+.rev-slide .stars{color:#f5a623;font-size:1.05rem;letter-spacing:3px}
+.rev-slide blockquote{font-size:.98rem;color:var(--text);margin-top:10px;line-height:1.55}
+.rev-slide cite{display:block;margin-top:10px;font-style:normal;font-weight:800;color:var(--navy);font-size:.85rem}
+.rev-slide .src{display:block;margin-top:4px;font-size:.73rem;font-weight:700;color:var(--muted);letter-spacing:.03em;text-transform:uppercase}
+.rev-slide.stat .big{font-size:2.1rem;font-weight:800;color:var(--navy);line-height:1.1}
+.rev-slide.stat p{font-size:.93rem;color:var(--text);margin-top:8px}
+.rev-dots{display:flex;gap:8px;justify-content:center;padding:0 0 18px}
+.rev-dots button{width:9px;height:9px;border-radius:50%;border:none;background:var(--line);cursor:pointer;padding:0;transition:.18s}
+.rev-dots button.on{background:var(--blue);transform:scale(1.3)}
+.rev-nav{position:absolute;top:45%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);cursor:pointer;font-size:1.15rem;line-height:1;color:var(--navy);display:flex;align-items:center;justify-content:center;z-index:2}
+.rev-nav.prev{left:10px}.rev-nav.next{right:10px}
+@media(max-width:600px){.rev-nav{display:none}.rev-slide{padding:26px 18px}}
 .cbtn small{margin-left:auto;color:var(--muted);font-weight:600;font-size:.73rem;text-align:right}
 
 /* socials */
@@ -581,7 +598,12 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
     <div><b>92%</b><span>Facebook recommend rate</span></div>
     <div><b>&lt;2 min</b><span>To book your slot</span></div>
   </div>
-  <div class="container" style="text-align:center;margin-top:22px"><a class="btn btn-white btn-sm" href="https://www.facebook.com/profile.php?id=61586863105008" target="_blank" rel="noopener">⭐ Read patient reviews on Facebook</a></div>
+  <div class="rev-wrap reveal" aria-roledescription="carousel" aria-label="Patient reviews and clinic stats">
+      <button class="rev-nav prev" type="button" aria-label="Previous slide">‹</button>
+      <div class="rev-track" id="revTrack"></div>
+      <button class="rev-nav next" type="button" aria-label="Next slide">›</button>
+      <div class="rev-dots" id="revDots" role="tablist" aria-label="Choose slide"></div>
+    </div>
 </div>
 
 <!-- ============ BRANCHES ============ -->
@@ -917,6 +939,48 @@ var io = new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+// reviews / stats carousel (real numbers pulled from our public Facebook pages)
+var REVIEWS = [
+  {type:'stat', big:'92%', text:'of people on Facebook recommend Cure Health', src:'Facebook page rating'},
+  {type:'stat', big:'8.4K+', text:'followers across our Kawit and Imus pages', src:'Facebook · Aug 2026'},
+  {type:'stat', big:'7 days', text:'open every week, both branches — walk-ins welcome', src:'Kawit · Imus'}
+];
+// Real patient quotes go here when provided, e.g.
+// REVIEWS.unshift({type:'quote', stars:5, text:'…', src:'NameInitials · Kawit'});
+
+(function(){
+  var track = document.getElementById('revTrack'), dots = document.getElementById('revDots');
+  if(!track || !dots) return;
+  var slides = REVIEWS.filter(function(r){ return r.type==='stat' ? true : !!(r.text && r.src); });
+  track.innerHTML = slides.map(function(r){
+    if(r.type==='quote'){
+      return '<div class="rev-slide"><div class="stars">'+'★'.repeat(r.stars||5)+'</div><blockquote>\u201C'+r.text+'\u201D</blockquote><cite>'+r.src+'</cite><span class="src">Posted on Facebook</span></div>';
+    }
+    return '<div class="rev-slide stat"><div class="big">'+r.big+'</div><p>'+r.text+'</p><span class="src">'+r.src+'</span></div>';
+  }).join('');
+  dots.innerHTML = slides.map(function(_,i){ return '<button type="button" role="tab" aria-label="Slide '+(i+1)+'"></button>'; }).join('');
+  var dbtns = [].slice.call(dots.children), i = 0, timer;
+  function go(n){
+    i = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-i*100) + '%)';
+    dbtns.forEach(function(b,k){ b.classList.toggle('on', k===i); });
+  }
+  function auto(){ clearInterval(timer); timer = setInterval(function(){ go(i+1); }, 5500); }
+  document.querySelector('.rev-nav.prev').addEventListener('click', function(){ go(i-1); auto(); });
+  document.querySelector('.rev-nav.next').addEventListener('click', function(){ go(i+1); auto(); });
+  dbtns.forEach(function(b,k){ b.addEventListener('click', function(){ go(k); auto(); }); });
+  var x0 = null;
+  track.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; clearInterval(timer); }, {passive:true});
+  track.addEventListener('touchend', function(e){
+    if(x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if(Math.abs(dx) > 40) go(dx < 0 ? i+1 : i-1);
+    x0 = null; auto();
+  }, {passive:true});
+  document.addEventListener('visibilitychange', function(){ document.hidden ? clearInterval(timer) : auto(); });
+  go(0); auto();
+})();
 </script>
 
 </body>
