@@ -491,6 +491,7 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
         <div class="ref-chip" id="refChip">REF</div>
         <p style="font-size:.82rem;margin-top:14px">📸 Screenshot or write down your reference code.<br><b>Payment is on visit — nothing to pay now.</b></p>
         <div class="result-actions">
+          <a class="btn btn-primary" id="gcalAdd" href="#" target="_blank" rel="noopener">📅 Add to Google Calendar</a>
           <button class="btn btn-outline" type="button" id="bookAgain">Book another appointment</button>
         </div>
       </div>
@@ -855,6 +856,24 @@ function smsHref(branch, text){
   return 'sms:'+num+'?&body='+encodeURIComponent(text);
 }
 
+function gcalHref(d){
+  var h = /Morning/.test(d.time) ? '08' : /Midday/.test(d.time) ? '11' : /Afternoon/.test(d.time) ? '14' : '08';
+  var day = d.date.replace(/-/g,'');
+  var s = day+'T'+h+'0000', e = day+'T'+('0'+(Number(h)+1)).slice(-2)+'0000';
+  var addr = d.branch === 'Imus'
+    ? 'Seven One Building, Tanzang Luma V, Imus, Cavite'
+    : 'A-3 GF, ASJ Building, Centennial Road, Batong Dalig, Kawit, Cavite';
+  var details = 'Booking ref: '+d.ref+
+    '\nService: '+d.service+
+    '\nName: '+d.name+
+    '\n\nThe clinic will confirm your exact time by SMS during clinic hours (8 AM - 5 PM). Pay on visit.';
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE'+
+    '&text='+encodeURIComponent('Cure Health - '+d.service+' ('+d.branch+')')+
+    '&dates='+s+'/'+e+'&ctz=Asia/Manila'+
+    '&details='+encodeURIComponent(details)+
+    '&location='+encodeURIComponent(addr);
+}
+
 if(form){
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
@@ -884,6 +903,7 @@ if(form){
 
     function finishOk(){
       document.getElementById('refChip').textContent = d.ref;
+      document.getElementById('gcalAdd').href = gcalHref(d);
       show(successPanel);
       submitBtn.disabled = false; submitBtn.textContent = 'Send Booking Request →';
     }
