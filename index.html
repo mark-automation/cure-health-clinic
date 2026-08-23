@@ -7,10 +7,16 @@
 <meta name="format-detection" content="telephone=no">
 <title>Cure Health Diagnostic &amp; Ultrasound Clinic — Ultrasound, Lab, CT Scan &amp; 2D Echo in Kawit &amp; Imus, Cavite</title>
 <meta name="description" content="Cure Health Diagnostic and Ultrasound Clinic LTD. Co. — OB & general ultrasound (2D/3D/4D), laboratory, CT scan, 2D echo, duplex scan and doctor consultations in Kawit and Imus, Cavite. Open 7 days a week. Book your appointment online, by SMS or by phone.">
+<link rel="canonical" href="https://mark-automation.github.io/cure-health-clinic/">
 <meta property="og:title" content="Cure Health Diagnostic & Ultrasound Clinic — Kawit & Imus, Cavite">
 <meta property="og:description" content="Ultrasound • Laboratory • CT Scan • 2D Echo • Duplex Scan • Consultations. Open 7 days a week. Book online in minutes.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/logo-web.png">
+<meta property="og:url" content="https://mark-automation.github.io/cure-health-clinic/">
+<meta property="og:image" content="https://mark-automation.github.io/cure-health-clinic/assets/logo-web.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cure Health Diagnostic & Ultrasound Clinic — Kawit & Imus, Cavite">
+<meta name="twitter:description" content="Ultrasound • Laboratory • CT Scan • 2D Echo • Duplex Scan • Consultations. Open 7 days a week. Book online in minutes.">
+<meta name="twitter:image" content="https://mark-automation.github.io/cure-health-clinic/assets/logo-web.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,6 +218,10 @@ section{padding:72px 0}
 .prep .prep-body{padding:0 22px 20px;font-size:.87rem;color:var(--muted)}
 .prep .prep-body ul{padding-left:20px;display:grid;gap:8px;margin-top:6px}
 .prep .prep-body b{color:var(--text)}
+/* faq */
+.faq-list{max-width:680px;margin:0 auto;display:grid;gap:12px}
+.faq-list .prep{margin:0}
+@media(max-width:880px){.faq-list{gap:10px}}
 
 /* trust strip */
 .trust{background:var(--navy);color:#fff;padding:32px 0}
@@ -356,37 +366,37 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
     <div class="svc-grid">
       <div class="svc reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M2 12h3l2-7 3 14 3-10 2 5 2-2h5"/></svg></div>
-        <h3>OB-Gyne Ultrasound</h3>
+        <h3 id="ob-ultrasound">OB-Gyne Ultrasound</h3>
         <p>Pregnancy tracking, congenital anomaly scan (CAS) and 3D/4D imaging — safe, gentle scans for you and your baby at every milestone.</p>
         <div class="branch-note">Available at both branches</div>
       </div>
       <div class="svc reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="12" r="7"/><path d="M21 12h-4l-2 3-2-6-2 3H3"/></svg></div>
-        <h3>General Ultrasound</h3>
+        <h3 id="general-ultrasound">General Ultrasound</h3>
         <p>Abdomen, thyroid, breast, KUB and soft-tissue scans using modern ultrasound equipment, read with care.</p>
         <div class="branch-note">Available at both branches</div>
       </div>
       <div class="svc reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 2v6l-5 8a3 3 0 0 0 2.6 4.5h10.8A3 3 0 0 0 20 16l-5-8V2"/><path d="M7 2h10"/></svg></div>
-        <h3>Laboratory</h3>
+        <h3 id="laboratory">Laboratory</h3>
         <p>CBC, blood chemistry, urinalysis, drug tests and more — accurate results from our on-site lab.</p>
         <div class="branch-note">Available at both branches</div>
       </div>
       <div class="svc reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="3"/></svg></div>
-        <h3>CT Scan</h3>
+        <h3 id="ct-scan">CT Scan</h3>
         <p>Detailed cross-sectional imaging when your doctor needs a closer look — fast scheduling, clear reports.</p>
         <div class="branch-note">Available at both branches</div>
       </div>
       <div class="svc reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20.8 8.6a5.5 5.5 0 0 0-8.8-1.5L12 7l-.1-.1a5.5 5.5 0 0 0-7.8 7.8l7.9 7.8 7.9-7.8a5.5 5.5 0 0 0 .9-6.1z"/><path d="M7 12h2l1.5-2.5L12 14l1.5-2H17"/></svg></div>
-        <h3>2D Echo &amp; Duplex Scan</h3>
+        <h3 id="echo-duplex">2D Echo &amp; Duplex Scan</h3>
         <p>Echocardiography and vascular duplex studies to check your heart and circulation in detail.</p>
         <div class="branch-note">By appointment</div>
       </div>
       <div class="svc reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <h3>Doctor Consultations</h3>
+        <h3 id="consultations">Doctor Consultations</h3>
         <p>OB-gyne and general medicine consults — discuss your results and get a plan, all under one roof.</p>
         <div class="branch-note">Imus branch · both specialties</div>
       </div>
@@ -539,6 +549,7 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
     <div><b>92%</b><span>Facebook recommend rate</span></div>
     <div><b>&lt;2 min</b><span>To book your slot</span></div>
   </div>
+  <div class="container" style="text-align:center;margin-top:22px"><a class="btn btn-white btn-sm" href="https://www.facebook.com/profile.php?id=61586863105008" target="_blank" rel="noopener">⭐ Read patient reviews on Facebook</a></div>
 </div>
 
 <!-- ============ BRANCHES ============ -->
@@ -561,6 +572,7 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
         <div class="quick-contact">
           <a class="cbtn" href="tel:+639561839860">📞 Call<small>0956 183 9860</small></a>
           <a class="cbtn" href="sms:+639561839860?&amp;body=Hi%20Cure%20Health%20Kawit!%20I%27d%20like%20to%20book%20an%20appointment.%0A%0AName%3A%20%0AService%3A%20%0ADate%20%26%20time%3A%20">💬 SMS<small>auto-filled message</small></a>
+          <a class="cbtn" href="https://www.facebook.com/profile.php?id=61586863105008" target="_blank" rel="noopener">💬 Messenger<small>chat with us</small></a>
         </div>
         <div class="actions">
           <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&query=Cure+Health+Diagnostic+and+Ultrasound+Clinic+ASJ+Building+Centennial+Road+Batong+Dalig+Kawit+Cavite" target="_blank" rel="noopener">🗺️ Get Directions</a>
@@ -577,6 +589,7 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
           <a class="cbtn" href="tel:+639478406949">📞 Call<small>0926 681 4232</small></a>
           <a class="cbtn" href="tel:+639478406949">📞 Call<small>0947 840 6949</small></a>
           <a class="cbtn" href="sms:+639266814232?&amp;body=Hi%20Cure%20Health%20Imus!%20I%27d%20like%20to%20book%20an%20appointment.%0A%0AName%3A%20%0AService%3A%20%0ADate%20%26%20time%3A%20">💬 SMS<small>auto-filled message</small></a>
+          <a class="cbtn" href="https://www.facebook.com/people/Cure-Health-Diagnostic-and-Ultrasound-Clinic-LTDCO/61573464610524/" target="_blank" rel="noopener">💬 Messenger<small>chat with us</small></a>
         </div>
         <div class="actions">
           <a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&query=Cure+Health+Diagnostic+and+Ultrasound+Clinic+Seven+One+Building+Tanzang+Luma+Imus+Cavite" target="_blank" rel="noopener">🗺️ Get Directions</a>
@@ -585,6 +598,58 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
     </div>
   </div>
 </section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="kicker">Common Questions</div>
+      <h2>Frequently asked questions</h2>
+      <p>Everything patients usually ask before their first visit.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="prep">
+        <summary>Do I need an appointment, or can I just walk in?</summary>
+        <div class="prep-body"><p>Walk-ins are welcome at both branches — booked patients are prioritized. Booking online takes under 2 minutes, or you can reach us by SMS or phone, and we'll confirm your slot by text.</p></div>
+      </details>
+      <details class="prep">
+        <summary>Are you open on weekends?</summary>
+        <div class="prep-body"><p>Yes — both branches are open <b>7 days a week, 8:00 AM – 5:00 PM</b>. Kawit stays open until 5:30 PM on Saturdays.</p></div>
+      </details>
+      <details class="prep">
+        <summary>How much do your exams cost?</summary>
+        <div class="prep-body"><p>Rates depend on the specific exam or procedure. The fastest way to get current pricing is to send us a message on Facebook Messenger or call your nearest branch — we'll reply with the details right away.</p></div>
+      </details>
+      <details class="prep">
+        <summary>Do I need to pay when I book?</summary>
+        <div class="prep-body"><p>No. Booking is free and there's <b>no prepayment</b> — you only pay when you visit the clinic.</p></div>
+      </details>
+      <details class="prep">
+        <summary>How do I prepare for my exam?</summary>
+        <div class="prep-body"><p>Some exams need preparation — for example, abdominal ultrasound requires 6–8 hours of fasting, while pelvic and early-pregnancy scans need a full bladder. See the full preparation guide above; our staff will also confirm any instructions when we confirm your appointment.</p></div>
+      </details>
+      <details class="prep">
+        <summary>Where exactly are you located?</summary>
+        <div class="prep-body"><p><b>Kawit:</b> A-3 Ground Floor, ASJ Building, Centennial Road, Batong Dalig, Kawit, Cavite.<br><b>Imus:</b> Seven One Building, Tanzang Luma V, near Robinsons Imus, Cavite.<br>Tap <b>Get Directions</b> on any branch card above for GPS navigation.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Do I need an appointment, or can I just walk in?", "acceptedAnswer": {"@type": "Answer", "text": "Walk-ins are welcome at both branches — booked patients are prioritized. Book online in under 2 minutes, by SMS or by phone."}},
+    {"@type": "Question", "name": "Are you open on weekends?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both branches are open 7 days a week, 8:00 AM to 5:00 PM. Kawit is open until 5:30 PM on Saturdays."}},
+    {"@type": "Question", "name": "How much do your exams cost?", "acceptedAnswer": {"@type": "Answer", "text": "Rates depend on the specific exam. Message us on Facebook Messenger or call your nearest branch for current pricing."}},
+    {"@type": "Question", "name": "Do I need to pay when I book?", "acceptedAnswer": {"@type": "Answer", "text": "No. Booking is free with no prepayment — you pay when you visit the clinic."}},
+    {"@type": "Question", "name": "How do I prepare for my exam?", "acceptedAnswer": {"@type": "Answer", "text": "Abdominal ultrasound requires 6–8 hours fasting; pelvic and early-pregnancy scans require a full bladder. Staff confirm instructions when confirming your appointment."}},
+    {"@type": "Question", "name": "Where are you located?", "acceptedAnswer": {"@type": "Answer", "text": "Kawit: A-3 GF, ASJ Building, Centennial Road, Batong Dalig, Kawit, Cavite. Imus: Seven One Building, Tanzang Luma V, near Robinsons Imus, Cavite."}}
+  ]
+}
+</script>
 
 <!-- ============ CONTACT / SOCIALS ============ -->
 <section id="contact" style="padding-top:0">
@@ -645,6 +710,8 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
 <div class="mobile-bar">
   <a class="btn btn-outline" href="tel:+639266814232">📞 Call</a>
   <a class="btn btn-primary" href="#book">📅 Book Now</a>
+  <button class="btn btn-outline" id="shareBtn" type="button" style="flex:0 0 56px;padding:14px 0"
+          aria-label="Share this clinic">⇗</button>
 </div>
 
 <script>
@@ -656,6 +723,24 @@ footer .fineprint{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255
 var BOOKING_ENDPOINT = "";
 
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+// native share (mobile growth loop)
+var shareBtn = document.getElementById('shareBtn');
+if(shareBtn){
+  shareBtn.addEventListener('click', function(){
+    var data = {
+      title: 'Cure Health Clinic \u2014 Kawit & Imus, Cavite',
+      text: 'Ultrasound, lab, CT scan & 2D echo in Cavite. Open 7 days a week.',
+      url: location.origin + location.pathname
+    };
+    if(navigator.share){ navigator.share(data).catch(function(){}); }
+    else if(navigator.clipboard){
+      navigator.clipboard.writeText(data.url);
+      var t = shareBtn.textContent; shareBtn.textContent = '\u2713';
+      setTimeout(function(){ shareBtn.textContent = t; }, 1500);
+    }
+  });
+}
 
 // min date = today (PH time)
 (function(){
