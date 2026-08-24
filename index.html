@@ -1053,7 +1053,7 @@ if(form){
       slides = track.children.length, i = 0, timer = null;
   for(var k=0;k<slides;k++){
     var d = document.createElement('button');
-    d.type='button'; d.className='car-dot'+(k?'':' on');
+    d.type='button'; d.className='car-dot'+(k?'':' on'); d.setAttribute('role','tab');
     d.setAttribute('aria-label','Show review '+(k+1));
     (function(n){ d.addEventListener('click',function(){ go(n); restart(); }); })(k);
     dots.appendChild(d);
