@@ -976,6 +976,14 @@ function gcalHref(d){
     '&location='+encodeURIComponent(addr);
 }
 
+// Hardened setter: only allow same-pattern Google Calendar URLs onto anchor hrefs
+// (defence-in-depth for CodeQL js/xss-through-dom; user text is already encodeURIComponent'd)
+function setCalHref(id, url){
+  var el = document.getElementById(id);
+  if(!el) return;
+  el.href = /^https:\/\/calendar\.google\.com\/calendar\/render\?action=TEMPLATE&/.test(url) ? url : '#';
+}
+
 if(form){
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
@@ -987,9 +995,9 @@ if(form){
       service: document.getElementById('fService').value,
       date: document.getElementById('fDate').value,
       time: document.getElementById('fTime').value,
-      name: document.getElementById('fName').value.trim(),
+      name: document.getElementById('fName').value.trim().slice(0,80),
       phone: document.getElementById('fPhone').value.replace(/[\s\-]/g,''),
-      notes: document.getElementById('fNotes').value.trim()
+      notes: document.getElementById('fNotes').value.trim().slice(0,300)
     };
     var bad = false;
     bad = setInvalid('service', !d.service) || bad;
@@ -1005,14 +1013,14 @@ if(form){
 
     function finishOk(){
       document.getElementById('refChip').textContent = d.ref;
-      document.getElementById('gcalAdd').href = gcalHref(d);
+      setCalHref('gcalAdd', gcalHref(d));
       show(successPanel);
       submitBtn.disabled = false; submitBtn.textContent = 'Send Booking Request →';
     }
     function finishFallback(msg){
       if(msg) document.getElementById('fallbackMsg').textContent = msg;
       document.getElementById('fallbackSms').href = smsHref(d.branch, buildSmsText(d));
-      document.getElementById('gcalAddFb').href = gcalHref(d);
+      setCalHref('gcalAddFb', gcalHref(d));
       show(fallbackPanel);
       submitBtn.disabled = false; submitBtn.textContent = 'Send Booking Request →';
     }
